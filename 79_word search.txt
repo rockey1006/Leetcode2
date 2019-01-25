@@ -9,12 +9,9 @@
 此后进行上下左右的后一字符的递归检验，与此同时需要添加一个辅助的boolean二维数组判断该位置是否已经被走过。
 需要额外说的是，由于数组在递归的过程中值被改变则该数组即被改变（意思是再进行新的一次递归时，值也已经被改变了），
 在进行回溯处理时，需要额外将标记此位置是否已经被检测过的boolean二维数组进行修正。
-it became a valid letter again.时间复杂度search:O(4^l),l=len(word);total:O(m*n*4^l).
-No additional space：用一个bit mask，After board[y][x] ^= 256 the char became not a valid letter. After second board[y][x] ^= 256
-
-
- 
-
+时间复杂度search:O(4^l),l=len(word);total:O(m*n*4^l).
+No additional space：用一个bit mask，After board[y][x] ^= 256 the char became not a valid letter. After second board[y][x] ^= 256，
+it became a valid letter again。
 
 
 class Solution {
